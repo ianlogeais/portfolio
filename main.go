@@ -3,9 +3,11 @@ package main
 import (
 	"log"
 	"net/http"
+	"fmt"
 )
 
 func main() {
+	fmt.Print("Serveur lancé")
 
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 
